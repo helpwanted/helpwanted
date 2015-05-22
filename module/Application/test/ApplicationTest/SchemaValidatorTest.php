@@ -24,7 +24,11 @@ class SchemaValidatorTest extends PHPUnit_Framework_TestCase {
     }
 
     public function testThatFailedValidationReturnsErrors() {
-        $errors = ['stuff', 'thing'];
+        $errors = [
+            ['property' => 'stuff', 'message' => 'thing'],
+            ['property' => 'foo', 'message' => 'bar'],
+        ];
+        $expected = ['stuff' => 'thing', 'foo' => 'bar'];
 
         $validator = $this->getMock('JsonSchema\Validator');
         $validator->expects($this->once())->method('check');
@@ -33,6 +37,6 @@ class SchemaValidatorTest extends PHPUnit_Framework_TestCase {
 
         $v = new SchemaValidator($validator, null);
         $this->assertFalse($v->isValid(null));
-        $this->assertEquals($errors, $v->getMessages());
+        $this->assertEquals($expected, $v->getMessages());
     }
 }

@@ -28,7 +28,10 @@ class SchemaValidator implements ValidatorInterface {
      * @return array
      */
     public function getMessages() {
-        return $this->errors;
+        return array_combine(
+            array_column($this->errors, 'property'),
+            array_column($this->errors, 'message')
+        );
     }
 
     /**
