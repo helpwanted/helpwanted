@@ -18,8 +18,7 @@
     ],
     "dependencies": {
         "bootstrap": "~3.1",
-        "jquery": "~2.0",
-        "sass"
+        "jquery": "~2.0"
     },
     "devDependencies": {
     },

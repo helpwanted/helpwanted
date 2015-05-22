@@ -3,3 +3,4 @@ composer.phar
 .DS_Store
 .vagrant*
 .idea
+asset/bower_components
