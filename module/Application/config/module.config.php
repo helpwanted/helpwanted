@@ -45,13 +45,18 @@ return [
             'Zend\Session\Config\ConfigInterface'   => 'Zend\Session\Service\SessionConfigFactory',
             'Zend\Session\Storage\StorageInterface' => 'Zend\Session\Service\StorageFactory',
             'Zend\Session\SessionManager'           => 'Zend\Session\Service\SessionManagerFactory',
+            'Application\SchemaValidator'           => 'Application\SchemaValidatorFactory',
         ],
 
         'abstract_factories' => [
             'Zend\Session\Service\ContainerAbstractServiceFactory',
             'Zend\Log\LoggerAbstractServiceFactory',
             'Zend\Cache\Service\StorageCacheAbstractServiceFactory',
-        ]
+        ],
+
+        'invokables' => [
+            'JsonSchema\Validator' => 'JsonSchema\Validator',
+        ],
     ],
 
     'view_manager' => [
