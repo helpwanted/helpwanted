@@ -16,33 +16,39 @@
   "resources": {
     "persons": [
       {
-        "name": "Davey Shafik",
-        "email": "me@daveyshafik.com"
-      },
-      {
-        "name": "Quentin Schmick",
-        "email": "QSchmick@gmail.com",
-        "twitter": "@qtschmi"
+        "name": "John Bafford",
+        "email": "john@bafford.com",
+        "twitter": "@jbafford"
       },
       {
         "name": "Sean Fraser",
         "email": "sfraser.media@gmail.com"
+        "twitter": "@frasmage"
       },
       {
         "name": "Ian Littman",
         "email": "iansltx@gmail.com"
-      },
-      {
-        "name": "John Bafford",
-        "email": ""
+        "twitter": "@iansltx"
       },
       {
         "name": "Gemma Lynn",
-        "email": ""
+        "email": "gemma@ramblinations.com"
+        "twitter": "@ellotheth"
       },
       {
         "name": "Chuck Reeves",
         "email": "chuck@manchuck.com"
+        "twitter": "@manchuck"
+      },
+      {
+        "name": "Quentin Schmick",
+        "email": "QSchmick@gmail.com",
+        "twitter": "@qtschmick"
+      },
+      {
+        "name": "Davey Shafik",
+        "email": "me@daveyshafik.com"
+        "twitter": "@dshafik"
       }
     ],
     "bugs": [
