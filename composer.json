@@ -6,12 +6,11 @@
     },
   "require": {
     "php": ">=5.4",
-    "ext-mongo": ">=1.5.0",
     "ext-mbstring": "*",
     "zendframework/zendframework": "2.3.7",
     "rwoverdijk/assetmanager": "~1.3",
     "zfcampus/zf-apigility": "~1.0",
-    "phly/phly-mongo": "~1.0"
+    "justinrainbow/json-schema": "^1.4"
   },
   "require-dev" : {
     "zfcampus/zf-apigility-documentation": "~1.0",
