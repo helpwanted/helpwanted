@@ -12,6 +12,7 @@
 
 namespace Api\V1\Rest\Project;
 
+use Application\Service\ProjectRetrieverServiceInterface;
 use Application\Service\SchemaRetrievalService;
 use ZF\ApiProblem\ApiProblem;
 use ZF\Rest\AbstractResourceListener;
@@ -28,9 +29,21 @@ class ProjectResource extends AbstractResourceListener
      */
     protected $schemaRetrievalService;
 
-    public function __construct(SchemaRetrievalService $schemaRetrievalService)
-    {
+    /**
+     * @var ProjectRetrieverServiceInterface
+     */
+    private $projectRetrieverService;
+
+    /**
+     * @param SchemaRetrievalService $schemaRetrievalService
+     * @param ProjectRetrieverServiceInterface $projectRetrieverService
+     */
+    public function __construct(
+        SchemaRetrievalService $schemaRetrievalService,
+        ProjectRetrieverServiceInterface $projectRetrieverService
+    ) {
         $this->schemaRetrievalService = $schemaRetrievalService;
+        $this->projectRetrieverService = $projectRetrieverService;
     }
 
     public function create($data)
@@ -49,7 +62,13 @@ class ProjectResource extends AbstractResourceListener
 
     public function fetchAll(array $params)
     {
-        return [new ProjectEntity()];
+        $service = $this->getEvent()->getRouteParam('service', '');
+        $user    = $this->getEvent()->getRouteParam('user', '');
+        $project = $this->getEvent()->getRouteParam('project', '');
+
+        $results = $this->projectRetrieverService->getByIdentifier($service, $user, $project);
+
+
     }
 
     public function fetch($projectId)

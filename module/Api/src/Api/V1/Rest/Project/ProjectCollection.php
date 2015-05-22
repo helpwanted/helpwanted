@@ -12,18 +12,54 @@
 
 namespace Api\V1\Rest\Project;
 
-use Zend\Paginator\Paginator;
+use Application\Service\ProjectRetrieverIterator;
 
 /**
  * ProjectCollection
  *
  * @author Chuck "MANCHUCK" Reeves <chuck@manchuck.com>
  */
-class ProjectCollection extends Paginator
+class ProjectCollection implements \Iterator
 {
-    public function getCurrentItems()
+    /**
+     * @var ProjectRetrieverIterator
+     */
+    private $iterator;
+
+    public function __construct(ProjectRetrieverIterator $iterator)
     {
-        $items = parent::getCurrentItems();
-        return $items;
+        $this->iterator = $iterator;
+    }
+
+    /**
+     * @return ProjectEntity
+     */
+    public function current()
+    {
+        $project = $this->iterator->current();
+        $entity  = new ProjectEntity();
+        $entity->exchangeArray($project->getArrayCopy());
+
+        return $entity;
+    }
+
+    public function next()
+    {
+        $this->iterator->next();
+    }
+
+    public function valid()
+    {
+        return $this->iterator->valid();
+    }
+
+    public function key()
+    {
+        return $this->iterator->key();
+    }
+
+    public function rewind()
+    {
+        $this->iterator->rewind();
     }
 }
