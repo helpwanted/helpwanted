@@ -51,7 +51,11 @@ return [
             'Zend\Session\Service\ContainerAbstractServiceFactory',
             'Zend\Log\LoggerAbstractServiceFactory',
             'Zend\Cache\Service\StorageCacheAbstractServiceFactory',
-        ]
+        ],
+
+        'invokables' => [
+            'JsonSchema\Validator'
+        ],
     ],
 
     'view_manager' => [
