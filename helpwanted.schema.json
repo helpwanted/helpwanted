@@ -92,7 +92,7 @@
     }
   },
   "required": [
-    "technology",
+    "technologies",
     "skills",
     "resources"
   ]
