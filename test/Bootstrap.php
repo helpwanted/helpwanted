@@ -25,9 +25,4 @@ $nameSpaces['IntegrationTest'] = './IntegrationTest';
     ]
 ]);
 
-$config   = include '../config/autoload/settings.global.php';
-$clusters   = include '../config/autoload/mongo.local.php';
-$settings = array_merge(['account_clusters' =>$clusters['mongo']], $config['ads-settings']);
-\Application\Utils\SettingsRegistry::setSettings($settings);
-
 unset($settings, $nameSpaces, $directory, $directoryIterator);
