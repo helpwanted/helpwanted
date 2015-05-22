@@ -45,6 +45,7 @@ return [
             'Zend\Session\Config\ConfigInterface'   => 'Zend\Session\Service\SessionConfigFactory',
             'Zend\Session\Storage\StorageInterface' => 'Zend\Session\Service\StorageFactory',
             'Zend\Session\SessionManager'           => 'Zend\Session\Service\SessionManagerFactory',
+            'Application\SchemaValidator'           => 'Application\SchemaValidatorFactory',
         ],
 
         'abstract_factories' => [
@@ -54,7 +55,7 @@ return [
         ],
 
         'invokables' => [
-            'JsonSchema\Validator'
+            'JsonSchema\Validator' => 'JsonSchema\Validator',
         ],
     ],
 

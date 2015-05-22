@@ -1,7 +1,9 @@
 <?php
 
+namespace ApplicationTest;
 
 use Application\SchemaValidator;
+use PHPUnit_Framework_TestCase;
 
 class SchemaValidatorTest extends PHPUnit_Framework_TestCase {
     public function testThatNoErrorsExistInitially() {
