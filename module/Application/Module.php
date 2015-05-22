@@ -1,13 +1,11 @@
 <?php
 namespace Application;
 
-use Application\Utils\SettingsRegistry;
 use Zend\EventManager\Event;
 use Zend\Http\Request as HttpRequest;
 use Zend\ModuleManager\ModuleManager;
 use Zend\Mvc\ModuleRouteListener;
 use Zend\Mvc\MvcEvent;
-use Zend\Session\SaveHandler\Cache;
 
 /**
  * Class Module

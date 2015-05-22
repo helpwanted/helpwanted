@@ -2,27 +2,10 @@
 
 return [
     'modules' => [
-        'Account',
         'Application',
-        'Bucket',
-        'Campaign',
-        'Channel',
-        'Cron',
-        'Dashboard',
-        'Google',
-        'Invite',
-        'Job',
-        'Panel',
-        'Filter',
-        'Product',
-        'Security',
-        'Recent',
-        'Signup',
-        'User',
-        'Mongo',
+        'Api',
 
         'AssetManager',
-        'ZfcRbac',
         'ZF\Apigility',
         'ZF\Apigility\Provider',
         'ZF\Apigility\Documentation',
@@ -34,8 +17,7 @@ return [
         'ZF\ContentValidation',
         'ZF\Rest',
         'ZF\Rpc',
-        'ZF\Versioning',
-        'Mailing',
+        'ZF\Versioning'
     ],
 
     'module_listener_options' => [
