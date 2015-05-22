@@ -3,8 +3,7 @@
   "technology": {
     "php": ">= 5.6.* | 7.*",
     "mongo": ">= 2.6.*",
-    "bootstrap":">= 3.3.*",
-    "":""
+    "bootstrap":">= 3.3.*"
   },
   "skills": [
     "Graphs",
@@ -22,22 +21,22 @@
       },
       {
         "name": "Sean Fraser",
-        "email": "sfraser.media@gmail.com"
+        "email": "sfraser.media@gmail.com",
         "twitter": "@frasmage"
       },
       {
         "name": "Ian Littman",
-        "email": "iansltx@gmail.com"
+        "email": "iansltx@gmail.com",
         "twitter": "@iansltx"
       },
       {
         "name": "Gemma Lynn",
-        "email": "gemma@ramblinations.com"
+        "email": "gemma@ramblinations.com",
         "twitter": "@ellotheth"
       },
       {
         "name": "Chuck Reeves",
-        "email": "chuck@manchuck.com"
+        "email": "chuck@manchuck.com",
         "twitter": "@manchuck"
       },
       {
@@ -47,7 +46,7 @@
       },
       {
         "name": "Davey Shafik",
-        "email": "me@daveyshafik.com"
+        "email": "me@daveyshafik.com",
         "twitter": "@dshafik"
       }
     ],
