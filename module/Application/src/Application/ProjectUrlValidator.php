@@ -25,7 +25,7 @@ class ProjectUrlValidator implements ValidatorInterface {
             return false;
         }
         
-        if (strpos($value, '/../') !== false) {
+        if (strpos($value, '/../') !== false || substr($value, -3) == '/..') {
             $this->errors['hax0r'] = "URL contains invalid characters";
             return false;
         }
