@@ -10,6 +10,9 @@ use Zend\Validator\ValidatorInterface;
 
 class ProjectRetrievalService
 {
+    const JSON_PARSE_FAILURE = 1400;
+    const SCHEMA_VALIDATION_FAILURE = 2400;
+
     protected $http;
     protected $validator;
 
@@ -48,11 +51,11 @@ class ProjectRetrievalService
     protected function parseResponse($json_string) {
         $rawObject = json_decode($json_string, JSON_OBJECT_AS_ARRAY);
         if (!$rawObject) {
-            throw new ProjectRetrievalException('Could not parse JSON', 1400);
+            throw new ProjectRetrievalException('Could not parse JSON', static::JSON_PARSE_FAILURE);
         }
 
         if (!$this->validator->isValid($rawObject)) {
-            throw new ProjectValidationException($this->validator->getMessages(), 2400);
+            throw new ProjectValidationException($this->validator->getMessages(), static::SCHEMA_VALIDATION_FAILURE);
         }
 
         $project = new Project();
