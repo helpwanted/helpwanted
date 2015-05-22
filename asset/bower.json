@@ -1,8 +1,7 @@
 {
-    "name": "ads-admin",
-    "homepage": "http://www.salesandordersads.com/",
-    "description": "Sales and Orders Ads Admin UI",
-    "main": "dist/ads-admin/index.html",
+    "name": "help-us-code",
+    "description": "Help Us Code",
+    "main": "dist/help-us/index.html",
     "keywords": [
         "API"
     ],
@@ -20,6 +19,7 @@
     "dependencies": {
         "bootstrap": "~3.1",
         "jquery": "~2.0",
+        "sass"
     },
     "devDependencies": {
     },

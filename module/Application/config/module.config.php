@@ -33,17 +33,6 @@ return [
                     ]
                 ]
             ],
-
-            'admin-sidebar' => [
-                'type' => 'Literal',
-                'options' => [
-                    'route' => '/html/sidebar.html',
-                    'defaults' => [
-                        'controller' => 'Sidebar\Admin\Controller',
-                        'action'     => 'index'
-                    ]
-                ]
-            ]
         ]
     ],
 
