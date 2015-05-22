@@ -1,0 +1,60 @@
+{
+  "version": "0.1a",
+  "technology": {
+    "php": ">= 5.6.* | 7.*",
+    "mongo": ">= 2.6.*",
+    "bootstrap":">= 3.3.*",
+    "":""
+  },
+  "skills": [
+    "Graphs",
+    "Rest API",
+    "Web Development",
+    "NoSQL"
+  ],
+  "needs": [],
+  "resources": {
+    "persons": [
+      {
+        "name": "Davey Shafik",
+        "email": "me@daveyshafik.com"
+      },
+      {
+        "name": "Quentin Schmick",
+        "email": "QSchmick@gmail.com",
+        "twitter": "@qtschmi"
+      },
+      {
+        "name": "Sean Fraser",
+        "email": "sfraser.media@gmail.com"
+      },
+      {
+        "name": "Ian Littman",
+        "email": "iansltx@gmail.com"
+      },
+      {
+        "name": "John Bafford",
+        "email": ""
+      },
+      {
+        "name": "Gemma Lynn",
+        "email": ""
+      },
+      {
+        "name": "Chuck Reeves",
+        "email": "chuck@manchuck.com"
+      }
+    ],
+    "bugs": [
+      "bugs@helpusco.de"
+    ],
+    "mailinglist": [
+      "devs@helpusco.de"
+    ],
+    "security": [
+      "security@helpusco.de"
+    ],
+    "repository": "https://github.com/helpwanted/helpwanted",
+    "homepage": "https://helpusco.de"
+  }
+}
