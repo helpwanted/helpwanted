@@ -1,0 +1,2 @@
+path.data: /opt/data/elasticsearch
+path.log: /opt/data/elasticsearch/logs
