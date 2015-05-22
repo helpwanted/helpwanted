@@ -1,14 +1,9 @@
 <?php
 $version = 'dist';
-$path    = __DIR__ . '/../../../asset/' . $version . '/ads-admin/index.html';
+$path    = __DIR__ . '/../../../asset/' . $version . '/help-us/index.html';
 // @todo update these when routes are set up
 $apiBase = '/api/';
 $adminBase = '/admin-api/';
 $basePath = $this->serverUrl(rtrim($this->basePath(), '/'));
 
-
-$html = file_get_contents($path);
-$html = str_replace('%BASE_HREF%', $basePath, $html);
-$html = str_replace('%API_BASE%', $apiBase, $html);
-$html = str_replace('%ADMIN_BASE%', $adminBase, $html);
 echo $html;
