@@ -2,28 +2,26 @@
 
 namespace Application;
 
-
-/**
- * Project
- *
- * @author Chuck "MANCHUCK" Reeves <chuck@manchuck.com>
- */
 class Project
 {
+    // TODO fix this horrible Array-Oriented Programming aberration
+    protected $data;
+
     /**
      * @see Helpwanted.json
      * @return array
      */
     public function getArrayCopy()
     {
-        return [];
+        return $this->data;
     }
 
     /**
      * @param array $data
+     * @return $this
      */
     public function exchangeArray(array $data)
     {
-
+        $this->data = $data;
     }
 }
