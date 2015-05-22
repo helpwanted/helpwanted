@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" id="extr-page">
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta charset="utf-8">
+
+    <link rel="icon" type="image/png" href="/img/favicon.ico" />
+
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" type="text/css" href="/css/sando.css" />
+    <?php $this->headTitle()->setSeparator(' - ')->append('Sales & Orders'); ?>
+    <?= $this->headTitle(); ?>
+
+</head>
+<body class="animated fadeInDown">
+    <header id="header">
+
+        <div id="logo-group">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="#"></a>
+            </div>
+        </div>
+
+    </header>
+
+    <div id="main" role="main">
+        <?= $this->content; ?>
+    </div>
+
+    <script src="/js/vendor-ui.js"></script>
+    <script src="/js/vendor-angular.js"></script>
+    <script src="/ui/vendor-smart.js"></script>
+
+</body>
+</html>
