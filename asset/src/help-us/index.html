@@ -32,9 +32,10 @@
     </header>
 
     <form>
-        <h2>Looking for a project to join?<h2>
-        <h3>Tell us what you are good at!</h3>
+        
         <div class="form-group">
+            <h2>Looking for a project to join?<h2>
+            <h3>Tell us what you are good at!</h3>
             <label for="search">What languages, technologies and/or skills do you have that you could contribute?</label>
             <p class="help-block">e.g. C++, jQuery, documentation, unit testing, opengl, etc.</p>
             <input type="text" id="search" class="form-control">
@@ -60,14 +61,7 @@
                         <li><i class="icon-people"></i>{{# of contributors}}</li>
                     </ul>
                 </div>
-                <div>
-                    <h3>What this project needs help with:</h3>
-                    <ul class="needs">
-                        <li>{{needs[0]}}</li>
-                        <li>{{needs[1]}}</li>
-                    </ul>
-                </div>
-                <footer class="wanted">
+                <div class="wanted">
                     <h4>Technologies</h4>
                     <ul class="technologies">
                         <li>PHP: <span class="version">&gt;= 5.6.* | 7.*</span></li>]
@@ -82,7 +76,16 @@
                         <li>{{skill}}</li>
                         ...
                     </ul>
-                </footer>
+                </div>
+                <div>
+                    <h3>What this project needs help with:</h3>
+                    <ul class="needs">
+                        <li>{{needs[0]}}</li>
+                        <li>{{needs[1]}}</li>
+                    </ul>
+                </div>
+                
+                <!-- sidebar -->
                 <aside>
                     <h3>Get in touch</h3>
                     <ul>
@@ -99,6 +102,7 @@
                         ...
                     </ul>
                 </aside>
+
             </main>
 
         </li>
