@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en" id="ng-app" ng-app="ads-admin" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta charset="utf-8">
+
+    <base href="/"/>
+
+    <link rel="icon" type="image/png" href="/img/favicon.ico" />
+
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+
+    <!-- build:css /css/sando.css -->
+    <link rel="stylesheet" type="text/css" href="vendor/bootstrap/dist/css/bootstrap.css" />
+    <link rel="stylesheet" type="text/css" href="vendor/angular-loading-bar/build/loading-bar.css" />
+
+    <link rel="stylesheet" type="text/css" href="css/smartadmin-production.min.css" />
+    <link rel="stylesheet" type="text/css" href="css/smartadmin-skins.min.css" />
+    <link rel="stylesheet" type="text/css" href="css/smartadmin-rtl.min.css" />
+
+    <link rel="stylesheet" type="text/css" href="css/general.css" />
+    <link rel="stylesheet" type="text/css" href="css/google.css" />
+    <link rel="stylesheet" type="text/css" href="css/security.css" />
+    <link rel="stylesheet" type="text/css" href="css/wizard.css" />
+    <link rel="stylesheet" type="text/css" href="css/thankyou.css" />
+    <link rel="stylesheet" type="text/css" href="css/filter.css" />
+    <link rel="stylesheet" type="text/css" href="css/dashboard.css" />
+    <link rel="stylesheet" type="text/css" href="css/buttons.css" />
+    <link rel="stylesheet" type="text/css" href="css/text.css" />
+    <link rel="stylesheet" type="text/css" href="css/colors.css" />
+    <link rel="stylesheet" type="text/css" href="css/product.css" />
+    <link rel="stylesheet" type="text/css" href="css/bucket.css" />
+    <link rel="stylesheet" type="text/css" href="css/account-user.css" />
+    <link rel="stylesheet" type="text/css" href="css/guide.css" />
+    <link rel="stylesheet" type="text/css" href="css/panel.css" />
+    <!-- endbuild -->
+
+    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,300,400,700">
+
+    <title ng-bind="$state.current.data.page_title + ' - Sales &amp; Orders'">Sales &amp; Orders</title>
+</head>
+
+<body class="smart-style-2 fixed-navigation fixed-ribbon fixed-header fixed-page-footer" data-api-base-path="%API_BASE%" data-admin-base-path="%ADMIN_BASE%">
+
+    <header id="header" ng-cloak ui-view="navigation"></header>
+
+    <aside id="left-panel" ng-cloak ui-view="sidebar"></aside>
+
+    <div id="main" role="main">
+        <div id="ribbon">
+            <span class="ribbon-button-alignment">
+                <span id="refresh" class="btn btn-ribbon" rel="tooltip" data-action="resetWidgets" data-title="refresh" data-placement="bottom" data-original-title="<i class='text-warning fa fa-warning'></i> Warning! This will reset all your widget settings." data-html="true" data-reset-msg="Would you like to RESET all your saved widgets and clear LocalStorage?">
+                    <i class="fa fa-refresh"></i>
+                </span>
+            </span>
+
+            <breadcrumb></breadcrumb>
+        </div>
+
+        <div id="content" ui-view="content" class="view-animate col-xs-12  margin-bottom-120" ></div>
+
+        <div class="col-xs-12" ng-show="!loadingDone" id="initialLoading">
+            <div id="loadingBar" >
+                <h3>Loading please wait</h3>
+                <progressbar max="totalLoadingSteps" value="loadingStep" class="progress-striped active progress-sm"></progressbar>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="page-footer" ui-view="footer"> </div>
+
+    <!-- build:js js/vendor-ui.js -->
+    <script src="vendor/jquery/jquery.js"></script>
+    <script src="vendor/jquery-ui/jquery-ui.js"></script>
+    <script src="vendor/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="vendor/lodash/dist/lodash.js"></script>
+    <script src="vendor/angular/angular.js"></script>
+    <script src="vendor/angular-ui-bootstrap-bower/ui-bootstrap.js"></script>
+    <script src="vendor/angular-ui-bootstrap-bower/ui-bootstrap-tpls.js"></script>
+    <script src="vendor/angular-ui-router/release/angular-ui-router.js"></script>
+    <script src="vendor/angular-resource/angular-resource.js"></script>
+    <script src="vendor/angular-flash/dist/angular-flash.js"></script>
+    <script src="vendor/restangular/dist/restangular.js"></script>
+    <script src="vendor/angular-loading-bar/build/loading-bar.js"></script>
+    <script src="vendor/angularjs-gravatardirective/dist/angularjs-gravatardirective.js"></script>
+    <script src="vendor/fuelux/dist/js/fuelux.min.js"></script>
+    <script src="ui/vendor-smart.js"></script>
+    <script src="ui/vendor-plugin.js"></script>
+    <!-- endbuild -->
+
+    <!-- build:js js/app.js -->
+    <script src="js/ads-admin.js"></script>
+    <script src="js/services/active-account.js"></script>
+    <script src="js/services/active-user.js"></script>
+    <script src="js/services/date-array.js"></script>
+    <script src="js/services/settings-service.js"></script>
+    <script src="js/filters/yes-no.js"></script>
+    <script src="js/controllers/account.js"></script>
+    <script src="js/controllers/navigation.js"></script>
+    <script src="js/controllers/sidebar.js"></script>
+    <script src="js/controllers/product.js"></script>
+    <script src="js/controllers/google.js"></script>
+    <script src="js/controllers/dashboard.js"></script>
+    <script src="js/controllers/profile.js"></script>
+    <script src="js/controllers/panel.js"></script>
+    <script src="js/controllers/invite.js"></script>
+    <script src="js/controllers/bucket.js"></script>
+    <script src="js/controllers/setup-wizard.js"></script>
+    <script src="js/controllers/guide.js"></script>
+    <script src="js/controllers/jobs.js"></script>
+    <script src="js/controllers/super-users.js"></script>
+    <script src="js/directives/breadcrumb.js"></script>
+    <script src="js/directives/confirm.js"></script>
+    <script src="js/directives/spark-line.js"></script>
+    <script src="js/directives/spinner.js"></script>
+    <script src="js/directives/easyPie.js"></script>
+    <script src="js/directives/widget.js"></script>
+    <script src="js/controllers/filter.js"></script>
+    <script src="js/directives/ads.js"></script>
+    <script src="js/directives/help.js"></script>
+    <script src="js/directives/easyPie.js"></script>
+    <script src="js/directives/panel.js"></script>
+    <script src="js/templates.js"></script>
+    <!-- endbuild -->
+
+    <script>
+        var _elev = window._elev || {};(function() {var i,e;i=document.createElement("script"),i.type='text/javascript';i.async=1,i.src="https://static.elev.io/js/v3.js",e=document.getElementsByTagName("script")[0],e.parentNode.insertBefore(i,e);})();
+        _elev.account_id = '5500375a7e65c';
+    </script>
+    <!--  MouseStats:Begin  -->
+    <script type="text/javascript">
+        var MouseStats_Commands = MouseStats_Commands ? MouseStats_Commands : [];
+        (function () {
+            if(document.getElementById('MouseStatsTrackingScript') == undefined) {
+                var mousestats_script = document.createElement('script');
+                mousestats_script.type = 'text/javascript';
+                mousestats_script.id = 'MouseStatsTrackingScript';
+                mousestats_script.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www2') + '.mousestats.com/js/4/7/4778809032281936450.js?' + Math.floor(new Date().getTime()/600000);
+                mousestats_script.async = true;
+                (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(mousestats_script);
+            } })();
+    </script>
+    <!--  MouseStats:End  -->
+</body>
+</html>

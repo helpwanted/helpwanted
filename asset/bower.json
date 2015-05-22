@@ -1,0 +1,28 @@
+{
+    "name": "ads-admin",
+    "homepage": "http://www.salesandordersads.com/",
+    "description": "Sales and Orders Ads Admin UI",
+    "main": "dist/ads-admin/index.html",
+    "keywords": [
+        "API"
+    ],
+    "license": "mit",
+    "private": true,
+    "ignore": [
+        "**/.*",
+        "dist",
+        "node_modules",
+        "bower_components",
+        "vendor",
+        "test",
+        "tests"
+    ],
+    "dependencies": {
+        "bootstrap": "~3.1",
+        "jquery": "~2.0",
+    },
+    "devDependencies": {
+    },
+    "resolutions": {
+    }
+}
