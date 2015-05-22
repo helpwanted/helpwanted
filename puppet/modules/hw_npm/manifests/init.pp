@@ -3,7 +3,7 @@ class hw_npm {
       manage_repo => true
     }
     
-    package { ['bower', 'grunt', 'grunt-cli']:
+    package { ['bower', 'grunt', 'grunt-cli', 'grunt-sass']:
         ensure => present,
         provider => 'npm',
         require => Class['nodejs'],
