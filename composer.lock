@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "1b13148cdf3a0c6ead6235cf0a4d974a",
+    "hash": "044aa6c0ec4029297c6f12a5d1e12d43",
     "packages": [
         {
             "name": "bshaffer/oauth2-server-php",
@@ -3181,7 +3181,7 @@
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {
-        "php": ">=5.4",
+        "php": ">=5.6",
         "ext-mbstring": "*"
     },
     "platform-dev": []
