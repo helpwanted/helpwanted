@@ -1,8 +1,5 @@
 <?php
-
-
 namespace Application;
-
 
 use Zend\Validator\Exception;
 use Zend\Validator\ValidatorInterface;
@@ -21,23 +18,23 @@ class ProjectUrlValidator implements ValidatorInterface {
      * @return bool
      * @throws Exception\RuntimeException If validation of $value is impossible
      */
-    public function isValid($value) {
+    public function isValid($value)
+    {
         if (!filter_var($value, FILTER_VALIDATE_URL)) {
             $this->errors['invalid-url'] = "Invalid URL";
+            return false;
         }
         
-        if (strpos($value, '/..') !== false) {
+        if (strpos($value, '/../') !== false) {
             $this->errors['hax0r'] = "URL contains invalid characters";
+            return false;
         }
         
         if (!in_array(parse_url($value, PHP_URL_HOST), ['github.com', 'bitbucket.org', 'www.github.com', 'www.bitbucket.org'])) {
             $this->errors['invalid-host'] = "Invalid Git host. Only github.com and bitbucket.org are supported.";
-        }
-        
-        if ($this->errors) {
             return false;
         }
-
+        
         return true;
     }
 
