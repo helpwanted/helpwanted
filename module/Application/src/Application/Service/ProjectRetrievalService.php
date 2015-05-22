@@ -8,7 +8,7 @@ use Application\ProjectValidationException as ValidationException;
 use Zend\Http\Client;
 use Zend\Validator\ValidatorInterface;
 
-class ProjectRetrievalService
+class ProjectRetrievalService implements ProjectRetrievalServiceInterface
 {
     const JSON_PARSE_FAILURE = 1400;
     const SCHEMA_VALIDATION_FAILURE = 2400;
@@ -28,7 +28,7 @@ class ProjectRetrievalService
     }
 
     /**
-     * @param $url
+     * @param string $url
      * @return \Application\Project
      * @throws \Zend\Http\Client\Exception\RuntimeException
      * @throws RetrievalException
