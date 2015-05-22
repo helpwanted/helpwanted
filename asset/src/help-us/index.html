@@ -18,11 +18,100 @@
 
     <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,300,400,700">
 
-    <title>Help Us</title>
+    <title>Help Us Code</title>
 </head>
 
 <body>
-    <h1>Help Us Code</h1>
+    <header id="header" class="navbar navbar-default">
+        <div class="container">
+            <h1><a href="#" class="nav-brand">Help Us Code</a></h1>
+            <ul class="nav navbar-nav">
+                <li><a href="#">Ask for Help?</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <form>
+        
+        <div class="form-group">
+            <h2>Looking for a project to join?<h2>
+            <h3>Tell us what you are good at!</h3>
+            <label for="search">What languages, technologies and/or skills do you have that you could contribute?</label>
+            <p class="help-block">e.g. C++, jQuery, documentation, unit testing, opengl, etc.</p>
+            <input type="text" id="search" class="form-control">
+            <!-- Ideally an autocompleted token input, e.g. http://sliptree.github.io/bootstrap-tokenfield/ -->
+        </div>
+    </form>
+
+    <ul id="results">
+        <!-- results listed as expandable cards.  -->
+        <li>
+            <header class="card-header">
+                <h2><a href="{{url to repo}}">{{Repo Name}}</a></h2>
+                <p>{{description}}</p>
+                <a href="#" class="btn btn-info">Expand</a>
+            </header>
+            <main class="card-body">
+                <div class="about-repo">
+                    <a href="{{repo url"><i class="icon-{{github or bitbucket}}"></i> View on {{Github or Bitbucket}}</a>
+                    <ul>
+                        <li><i class="icon-star"></i>{{# of favorites}}</li>
+                        <li><i class="icon-watch"></i>{{# of watchers}}</li>
+                        <li><i class="icon-fork"></i>{{# of forks}}</li>
+                        <li><i class="icon-people"></i>{{# of contributors}}</li>
+                    </ul>
+                </div>
+                <div class="wanted">
+                    <h4>Technologies</h4>
+                    <ul class="technologies">
+                        <li>PHP: <span class="version">&gt;= 5.6.* | 7.*</span></li>]
+                        <li>{{technology key}}: <span class="version">{{technology version}}</span></li>
+                        ...
+                    </ul>
+                    <h4>Skills</h4>
+                    <ul class="skills">
+                        <li>Graphs</li>
+                        <li>Rest API</li>
+                        <li>Web Development</li>
+                        <li>{{skill}}</li>
+                        ...
+                    </ul>
+                </div>
+                <div>
+                    <h3>What this project needs help with:</h3>
+                    <ul class="needs">
+                        <li>{{needs[0]}}</li>
+                        <li>{{needs[1]}}</li>
+                    </ul>
+                </div>
+                
+                <!-- sidebar -->
+                <aside>
+                    <h3>Get in touch</h3>
+                    <ul>
+                        <li><strong>Homepage</strong>: {{Homepage URL}}</li>
+                        <li><strong>Repository</strong>: {{repo URL}}</li>
+                        <li><strong>Report A Bug</strong>: {{Bugs Email}}</li>
+                        <li><strong>Join Mailing List</strong>: {{Mailing List Email}}</li>
+                        <li><strong>Report Security Issue</strong>: {{Security Email}}</li>
+                    </ul>
+                    <ul class="people">
+                        <li>
+                            <a href="mailto:{{user email}" title="{{user name}}"><img src="{{user (gr)avatar}}" alt="{{user name}}"></a>
+                        </li>
+                        ...
+                    </ul>
+                </aside>
+
+            </main>
+
+        </li>
+        ...
+    </ul>
+
+    <footer id="footer">
+        {{what do we want here?}}
+    </footer>
 
     <!-- build:js /js/script.js -->
     
