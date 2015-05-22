@@ -1,0 +1,25 @@
+{
+  "name": "help-us-code",
+  "description": "Help Us Code",
+  "main": "dist/help-us/index.html",
+  "keywords": [
+    "API"
+  ],
+  "license": "mit",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "dist",
+    "node_modules",
+    "bower_components",
+    "vendor",
+    "vendor-bower",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "~3.1",
+    "jquery": "~2.0"
+  },
+  "devDependencies": {}
+}

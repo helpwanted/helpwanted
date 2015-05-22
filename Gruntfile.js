@@ -20,8 +20,9 @@ module.exports = function(grunt) {
 
         // Project settings
         yeoman: {
-            app: 'src/ads-admin',
-            dist: 'dist/ads-admin'
+            vendor: 'vendor-bower',
+            app: 'asset/src/help-us',
+            dist: 'build/frontend'
         },
 
         // Watches files for changes and runs tasks based on the changed files
@@ -96,7 +97,7 @@ module.exports = function(grunt) {
                 // Adds additional paths for import (so can import bower_components as well)
                 paths: [
                     '<%= yeoman.app %>/less',
-                    '<%= yeoman.app %>/vendor'
+                    '<%= yeoman.vendor %>'
                 ]
             },
             server: {
