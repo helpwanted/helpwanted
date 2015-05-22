@@ -1,0 +1,66 @@
+{
+  "description": "Helping connect developers with open source projects",
+  "version": "0.1a",
+  "technologies": {
+    "php": ">= 5.6.* | 7.*",
+    "mongo": ">= 2.6.*",
+    "bootstrap":">= 3.3.*"
+  },
+  "skills": [
+    "Graphs",
+    "Rest API",
+    "Web Development",
+    "NoSQL"
+  ],
+  "needs": [],
+  "resources": {
+    "people": [
+      {
+        "name": "John Bafford",
+        "email": "john@bafford.com",
+        "twitter": "jbafford"
+      },
+      {
+        "name": "Sean Fraser",
+        "email": "sfraser.media@gmail.com",
+        "twitter": "frasmage"
+      },
+      {
+        "name": "Ian Littman",
+        "email": "iansltx@gmail.com",
+        "twitter": "iansltx"
+      },
+      {
+        "name": "Gemma Lynn",
+        "email": "gemma@ramblinations.com",
+        "twitter": "ellotheth"
+      },
+      {
+        "name": "Chuck Reeves",
+        "email": "chuck@manchuck.com",
+        "twitter": "manchuck"
+      },
+      {
+        "name": "Quentin Schmick",
+        "email": "QSchmick@gmail.com",
+        "twitter": "qtschmick"
+      },
+      {
+        "name": "Davey Shafik",
+        "email": "me@daveyshafik.com",
+        "twitter": "dshafik"
+      }
+    ],
+    "bugs": [
+      "bugs@helpusco.de"
+    ],
+    "mailinglist": [
+      "devs@helpusco.de"
+    ],
+    "security": [
+      "security@helpusco.de"
+    ],
+    "repository": "https://github.com/helpwanted/helpwanted",
+    "homepage": "https://helpusco.de"
+  }
+}
