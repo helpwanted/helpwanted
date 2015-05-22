@@ -1,0 +1,11 @@
+{
+    "name": "helpwanted/helpwanted",
+    "description": "Help Wanted application",
+    "autoload": {
+        "psr-0": { "": "src/" }
+    },
+    "require": {
+        "php": ">=5.6",
+        "justinrainbow/json-schema": "~1.2"
+    }
+}
