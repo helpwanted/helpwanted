@@ -86,6 +86,6 @@ class ProjectRetrievalService
      */
     protected function isUrlParent($parent_url, $child_url)
     {
-        return strpos($parent_url, '..') === false && strpos($child_url, $parent_url) === 0;
+        return strpos($child_url, $parent_url) === 0;
     }
 }
